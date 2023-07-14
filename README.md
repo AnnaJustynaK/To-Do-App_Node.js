@@ -41,23 +41,10 @@ Server Setup: To get our server up and running we need to use Express. Express i
 npm install express --save
 Once installed we can then add the following code into the index.js file
 
-//require the just installed express app
-var express = require('express');
-//then we call express
-var app = express();
-//takes us to the root(/) URL
-app.get('/', function (req, res) {
-//when we visit the root URL express will respond with 'Hello World'
-  res.send('Hello World!');
-});
-//the server is listening on port 3000 for connections
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-});
 Now we can test our server by running:
 
 node index.js
-// Example app listening on port 3000!
+
 And if you open your browser and visit: localhost:3000 and you should see Hello World!
 
 View Setup: For our view setup, we would likely not respond with plain text Hello World when anyone visits our root route, we would send back an HTML file that will have different heading text, buttons and a form for adding a new task. And for that, we’ll be using EJS (Embedded JavaScript). EJS is a templating language.
